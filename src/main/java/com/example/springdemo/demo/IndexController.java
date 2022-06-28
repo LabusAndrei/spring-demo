@@ -1,6 +1,6 @@
 package com.example.springdemo.demo;
 
-import com.example.springdemo.model.Tabel;
+import com.example.springdemo.model.TabelCurs2Exemplu;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +10,7 @@ import java.util.List;
 @Controller
 public class IndexController {
 
-    @GetMapping(value = "/index")
+    @GetMapping(value = "/inde")
     public String index(Model model){
 
         String text = "Hello from Spring Controller";
@@ -21,10 +21,10 @@ public class IndexController {
         List<String> fruits =List.of("mere", "banane", "pepeni", "pere", "cirese", "capsuni", "persici");
         model.addAttribute("fruits", fruits);
 
-        List<Tabel> employeeList = List.of(
-                new Tabel("Max", 6500, "IT Support"),
-                new Tabel("George", 8650, "Management"),
-                new Tabel("Andreea", 7345, "Logistics")
+        List<TabelCurs2Exemplu> employeeList = List.of(
+                new TabelCurs2Exemplu("Max", 6500, "IT Support"),
+                new TabelCurs2Exemplu("George", 8650, "Management"),
+                new TabelCurs2Exemplu("Andreea", 7345, "Logistics")
         );
         model.addAttribute("employeeList", employeeList);
 

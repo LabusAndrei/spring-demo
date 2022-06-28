@@ -1,12 +1,12 @@
 package com.example.springdemo.model;
 
-public class Tabel {
+public class TabelCurs2Exemplu {
 
     private String name;
     private int salary;
     private String department;
 
-    public Tabel(String name, int salary, String department) {
+    public TabelCurs2Exemplu(String name, int salary, String department) {
         this.name = name;
         this.salary = salary;
         this.department = department;

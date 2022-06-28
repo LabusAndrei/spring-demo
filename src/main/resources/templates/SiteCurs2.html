@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello From Spring</title>
+</head>
+<body>
+<h1>Market store</h1>
+<p th:text="${greetings}"></p>
+
+<table>
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Company</td>
+        <td>Gender</td>
+        <td>Color</td>
+        <td>Material</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${itemList}">
+        <td th:text="${item.name}"/>
+        <td th:text="${item.price}"/>
+        <td th:text="${item.company}"/>
+        <td th:text="${item.gender}"/>
+        <td th:text="${item.color}"/>
+        <td th:text="${item.material}"/>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
