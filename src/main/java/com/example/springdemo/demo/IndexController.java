@@ -10,7 +10,7 @@ import java.util.List;
 @Controller
 public class IndexController {
 
-    @GetMapping(value = "/inde")
+    @GetMapping(value = "/index")
     public String index(Model model){
 
         String text = "Hello from Spring Controller";
