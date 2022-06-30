@@ -2,15 +2,18 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Hello From Spring</title>
-
+    <title>Items Section</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/lucruri/Sidebar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/lucruri/Items.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
 
 </head>
-<body>
-<h1>Market store</h1>
-<p th:text="${greetings}"></p>
+<body style="background-color:#F5F5DC;">
+<div th:insert="fragments/Sidebar :: Sidebar"></div>
+<h1 class="center">Market store</h1>
+<p class="center">Items Area</p>
 
+<div class="section">
 <table class="table table-striped table-dark table-hover">
     <thead>
     <tr>
@@ -33,6 +36,6 @@
     </tr>
     </tbody>
 </table>
-
+</div>
 </body>
 </html>

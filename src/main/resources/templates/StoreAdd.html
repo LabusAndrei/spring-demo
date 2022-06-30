@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Stores Section</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/lucruri/Sidebar.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/lucruri/ItemsAdd.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <title>Create new Store</title>
+</head>
+<body style="background-color:#F5F5DC;">
+<div th:fragment="Sidebar">
+    <div th:insert="fragments/Sidebar :: Sidebar"></div>
+    <h1 class="section padding">Items Add</h1>
+
+    <div class="card section" style="background-color:#A9A9A9;">
+        <div class="card-header" style="background-color:black;">
+            <h5 class="card-title" style="color:white;">Enter a store</h5>
+        </div>
+        <div class="card-body">
+
+            <div class="input-group mb-3">
+                <label style="background-color:black;color:white;" class="input-group-text" for="inputGroupSelect01">Store Code</label>
+                <select class="form-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <span style="background-color:black;color:white;" class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="input-group mb-3">
+                <span style="background-color:black;color:white;" class="input-group-text" id="inputGroup-sizing-default">Address</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-dark me-md-2" type="button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
