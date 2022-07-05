@@ -11,37 +11,34 @@
 <body style="background-color:#F5F5DC;">
 <div th:fragment="Sidebar">
     <div th:insert="fragments/Sidebar :: Sidebar"></div>
-    <h1 class="section padding">Items Add</h1>
+    <h1 class="section padding">Create a new Store</h1>
 
     <div class="card section" style="background-color:#A9A9A9;">
         <div class="card-header" style="background-color:black;">
             <h5 class="card-title" style="color:white;">Enter a store</h5>
         </div>
         <div class="card-body">
+            <form th:action="@{/submitStore}" th:object="${store}" method="post">
 
-            <div class="input-group mb-3">
-                <label style="background-color:black;color:white;" class="input-group-text" for="inputGroupSelect01">Store Code</label>
-                <select class="form-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+                <div class="input-group mb-3 form-group">
+                    <span style="background-color:black;color:white;" class="input-group-text">Code</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${store.cod}">
+                </div>
+
+            <div class="input-group mb-3 form-group">
+                <span style="background-color:black;color:white;" class="input-group-text">Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${store.name}">
             </div>
 
-            <div class="input-group mb-3">
-                <span style="background-color:black;color:white;" class="input-group-text" id="inputGroup-sizing-default">Name</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <div class="input-group mb-3 form-group">
+                <span style="background-color:black;color:white;" class="input-group-text">Address</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${store.address}">
             </div>
 
-            <div class="input-group mb-3">
-                <span style="background-color:black;color:white;" class="input-group-text" id="inputGroup-sizing-default">Address</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end form-group">
+                <button class="btn btn-dark me-md-2" type="submit">Submit</button>
             </div>
-
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-dark me-md-2" type="button">Submit</button>
-            </div>
+            </form>
         </div>
     </div>
 

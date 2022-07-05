@@ -5,6 +5,10 @@ public class StoresTable {
     private String name;
     private String address;
 
+    public StoresTable(){
+
+    }
+
     public StoresTable(int cod, String name, String address) {
         this.cod = cod;
         this.name = name;

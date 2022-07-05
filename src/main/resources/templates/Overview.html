@@ -6,14 +6,29 @@
     <link rel="stylesheet" type="text/css" th:href="@{/lucruri/Sidebar.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/lucruri/ItemsAdd.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
-    <title>Create new Store</title>
+    <title>Overview</title>
+
 </head>
 <body style="background-color:#F5F5DC;">
 
 <div th:fragment="Sidebar">
     <div th:insert="fragments/Sidebar :: Sidebar"></div>
 
-
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-image" style="
+    background-image: url(https://source.unsplash.com/1600x1050/?clothes);
+    height: 600px;
+  ">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">Market Store</h1>
+                    <h4 class="mb-3">We wish you have a 5 star experience</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jumbotron -->
 
 </body>
 </html>

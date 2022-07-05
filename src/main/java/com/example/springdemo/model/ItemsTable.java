@@ -1,6 +1,6 @@
 package com.example.springdemo.model;
 
-public class TabelCurs2 {
+public class ItemsTable {
 
     private String name;
     private double price;
@@ -8,14 +8,20 @@ public class TabelCurs2 {
     private String gender;
     private String color;
     private String material;
+    private int store;
 
-    public TabelCurs2(String name, double price, String company, String gender, String color, String material) {
+    public ItemsTable(){
+
+    }
+
+    public ItemsTable(String name, double price, String company, String gender, String color, String material, int store) {
         this.name = name;
         this.price = price;
         this.company = company;
         this.gender = gender;
         this.color = color;
         this.material = material;
+        this.store =store;
     }
 
     public String getName() {
@@ -30,7 +36,7 @@ public class TabelCurs2 {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -64,5 +70,13 @@ public class TabelCurs2 {
 
     public void setMaterial(String material) {
         this.material = material;
+    }
+
+    public int getStore() {
+        return store;
+    }
+
+    public void setStore(int store) {
+        this.store = store;
     }
 }
