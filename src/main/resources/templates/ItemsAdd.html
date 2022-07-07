@@ -21,44 +21,51 @@
 
             <form th:action="@{/submitItem}" th:object="${items}" method="post">
 
-    <div class="input-group mb-3">
-        <span style="background-color:black;color:white;" class="input-group-text" >Name</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${items.name}">
-    </div>
-
-    <div class="input-group mb-3">
-        <span style="background-color:black;color:white;" class="input-group-text" >Price</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${items.price}">
-    </div>
-
-    <div class="input-group mb-3">
-        <span style="background-color:black;color:white;" class="input-group-text" >Company</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${items.company}">
-    </div>
-
-    <div class="input-group mb-3">
-        <span style="background-color:black;color:white;" class="input-group-text" >Gender</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${items.gender}">
-    </div>
-
-    <div class="input-group mb-3">
-        <span style="background-color:black;color:white;" class="input-group-text" >Color</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${items.color}">
-    </div>
-
-    <div class="input-group mb-3">
-        <span style="background-color:black;color:white;" class="input-group-text" >Material</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${items.material}">
-    </div>
-
                 <div class="input-group mb-3">
-                    <span style="background-color:black;color:white;" class="input-group-text" >Store</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" th:field="${items.store}">
+                    <span style="background-color:black;color:white;" class="input-group-text">Name</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.name}">
                 </div>
 
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-dark me-md-2" type="submit">Submit</button>
-            </div>
+                <div class="input-group mb-3">
+                    <span style="background-color:black;color:white;" class="input-group-text">Price</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.price}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span style="background-color:black;color:white;" class="input-group-text">Company</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.company}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span style="background-color:black;color:white;" class="input-group-text">Gender</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.gender}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span style="background-color:black;color:white;" class="input-group-text">Color</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.color}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span style="background-color:black;color:white;" class="input-group-text">Material</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.material}">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span style="background-color:black;color:white;" class="input-group-text">Store</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.store}">
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-dark me-md-2" type="submit">Submit</button>
+                </div>
 
             </form>
 

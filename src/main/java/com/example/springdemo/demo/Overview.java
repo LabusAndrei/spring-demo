@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class Overview {
 
     @GetMapping(value = "/Overview")
-    public String sidebar(Model model){
+    public String sidebar(Model model) {
 
         return "Overview";
     }

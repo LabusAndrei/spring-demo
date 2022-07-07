@@ -11,14 +11,14 @@ import java.util.List;
 public class IndexController {
 
     @GetMapping(value = "/index")
-    public String index(Model model){
+    public String index(Model model) {
 
         String text = "Hello from Spring Controller";
 
         model.addAttribute("greetings", text);
         model.addAttribute("myText", "some random text");
 
-        List<String> fruits =List.of("mere", "banane", "pepeni", "pere", "cirese", "capsuni", "persici");
+        List<String> fruits = List.of("mere", "banane", "pepeni", "pere", "cirese", "capsuni", "persici");
         model.addAttribute("fruits", fruits);
 
         List<TabelCurs2Exemplu> employeeList = List.of(

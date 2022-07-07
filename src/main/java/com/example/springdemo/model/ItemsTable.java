@@ -10,7 +10,7 @@ public class ItemsTable {
     private String material;
     private int store;
 
-    public ItemsTable(){
+    public ItemsTable() {
 
     }
 
@@ -21,7 +21,7 @@ public class ItemsTable {
         this.gender = gender;
         this.color = color;
         this.material = material;
-        this.store =store;
+        this.store = store;
     }
 
     public String getName() {

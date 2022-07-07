@@ -11,7 +11,7 @@ import java.util.List;
 public class StoreController {
 
     @GetMapping(value = "/Stores")
-    public String stores(Model model){
+    public String stores(Model model) {
 
         String text = "Welcome to the store";
 

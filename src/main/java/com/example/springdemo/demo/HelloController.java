@@ -11,19 +11,19 @@ public class HelloController {
 
     @GetMapping(value = "/printHello")
     @ResponseBody
-    public String printHello(){
+    public String printHello() {
         return "Hello World!";
     }
 
     @GetMapping(value = "/printParam")
     @ResponseBody
-    public String printParam(@RequestParam String name, @RequestParam String age){
+    public String printParam(@RequestParam String name, @RequestParam String age) {
         return "Hello World, " + name + " age: " + age;
     }
 
     @GetMapping(value = "/printPathVariable/{location}/products")
     @ResponseBody
-    public String printPathVariable(@PathVariable String location){
+    public String printPathVariable(@PathVariable String location) {
         return "Hello World, from " + location;
     }
 }

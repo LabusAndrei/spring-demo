@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello From Spring</title>
+    <meta charset="UTF-8">
+    <title>Hello From Spring</title>
 </head>
 <body>
 <h1>Hello from Spring Boot</h1>
@@ -11,24 +11,24 @@
 <p th:text="${myText}"></p>
 
 <div th:each="fruit : ${fruits}">
-  <p th:text="${fruit}"></p>
+    <p th:text="${fruit}"></p>
 </div>
 
 <table>
-  <thead>
-  <tr>
-    <td>Name</td>
-    <td>Salary</td>
-    <td>Department</td>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:each="employee : ${employeeList}">
-    <td th:text="${employee.name}"/>
-    <td th:text="${employee.salary}"/>
-    <td th:text="${employee.department}"/>
-  </tr>
-  </tbody>
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Salary</td>
+        <td>Department</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${employeeList}">
+        <td th:text="${employee.name}"/>
+        <td th:text="${employee.salary}"/>
+        <td th:text="${employee.department}"/>
+    </tr>
+    </tbody>
 </table>
 
 </body>

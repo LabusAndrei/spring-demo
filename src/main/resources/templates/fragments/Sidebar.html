@@ -6,16 +6,19 @@
     <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
     <title>Sidebar</title>
 </head>
-<body >
+<body>
 <div th:fragment="Sidebar">
 
     <nav class="navbar bg-dark">
         <div class="container-fluid">
 
             <div>
-                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                         class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>
                 </button>
             </div>
@@ -28,14 +31,15 @@
     </nav>
 
 
-
-    <div class="offcanvas offcanvas-start" style="background-color:#F5F5DC;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-        <div class="offcanvas-header" style="background-color:black;color:white;" >
+    <div class="offcanvas offcanvas-start" style="background-color:#F5F5DC;" data-bs-scroll="true" tabindex="-1"
+         id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header" style="background-color:black;color:white;">
             <h5 class="offcanvas-title " id="offcanvasWithBothOptionsLabel">Market store<br>Menu</h5>
-            <button type="button" style="background-color:white;" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" style="background-color:white;" class="btn-close" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
         </div>
 
-        <div class="padding" >
+        <div class="padding">
             <ul class="nav flex-column">
                 <li class="nav-item ">
                     <a class="nav-link active" style="color:black;" aria-current="page" href="../Overview">Overview</a>
@@ -43,12 +47,13 @@
             </ul>
         </div>
 
-        <p class="padding" >
-            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+        <p class="padding">
+            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+               aria-expanded="false" aria-controls="collapseExample1">
                 Items
             </a>
         </p>
-        <div class="collapse" id="collapseExample1" >
+        <div class="collapse" id="collapseExample1">
             <div class="card card-body" style="background-color:black;">
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -62,7 +67,8 @@
         </div>
 
         <p class="padding">
-            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample" role="button"
+               aria-expanded="false" aria-controls="collapseExample">
                 Store
             </a>
         </p>
@@ -80,7 +86,7 @@
         </div>
     </div>
 
-<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </div>
 </body>
