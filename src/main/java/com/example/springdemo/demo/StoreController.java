@@ -24,9 +24,9 @@ public class StoreController {
         model.addAttribute("greetings", text);
 
         List<StoresTable> storeList = List.of(
-                /*new StoresTable(1, "Bounce", "Obor, București"),
+                new StoresTable(1, "Bounce", "Obor, București"),
                 new StoresTable(2, "Chic", "Micro 19, Galati"),
-                new StoresTable(3, "Express", "Tractorul, Brașov")*/
+                new StoresTable(3, "Express", "Tractorul, Brașov")
         );
         model.addAttribute("storeList", storeList);
 
