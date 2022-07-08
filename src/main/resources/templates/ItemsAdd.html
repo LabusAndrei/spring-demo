@@ -22,6 +22,12 @@
             <form th:action="@{/submitItem}" th:object="${items}" method="post">
 
                 <div class="input-group mb-3">
+                    <span style="background-color:black;color:white;" class="input-group-text">Id</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.id}">
+                </div>
+
+                <div class="input-group mb-3">
                     <span style="background-color:black;color:white;" class="input-group-text">Name</span>
                     <input type="text" class="form-control" aria-label="Sizing example input"
                            aria-describedby="inputGroup-sizing-default" th:field="${items.name}">
@@ -60,7 +66,7 @@
                 <div class="input-group mb-3">
                     <span style="background-color:black;color:white;" class="input-group-text">Store</span>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default" th:field="${items.store}">
+                           aria-describedby="inputGroup-sizing-default" th:field="${items.storecode}">
                 </div>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">

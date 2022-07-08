@@ -21,9 +21,9 @@
             <form th:action="@{/submitStore}" th:object="${store}" method="post">
 
                 <div class="input-group mb-3 form-group">
-                    <span style="background-color:black;color:white;" class="input-group-text">Code</span>
+                    <span style="background-color:black;color:white;" class="input-group-text">Id</span>
                     <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default" th:field="${store.cod}">
+                           aria-describedby="inputGroup-sizing-default" th:field="${store.id}">
                 </div>
 
                 <div class="input-group mb-3 form-group">

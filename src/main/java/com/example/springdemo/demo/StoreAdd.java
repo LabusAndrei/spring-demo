@@ -19,12 +19,7 @@ public class StoreAdd {
 
     @PostMapping(value = "/submitStore")
     public String submitStore(@ModelAttribute StoresTable store) {
-        System.out.println("hello from submitstore");
-        System.out.println("Code " + store.getCod());
-        System.out.println("Name " + store.getName());
-        System.out.println("Address " + store.getAddress());
-        saveToDatabase(store);
-
+        System.out.println(store.toString());
         return "Stores";
     }
 

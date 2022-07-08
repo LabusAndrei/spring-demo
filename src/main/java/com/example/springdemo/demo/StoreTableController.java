@@ -1,7 +1,7 @@
 package com.example.springdemo.demo;
 
+import com.example.springdemo.model.StoresTable;
 import com.example.springdemo.repository.StoreRepository;
-import org.apache.catalina.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,26 +17,23 @@ public class StoreTableController {
 
     @GetMapping(value = "/createStore")
     @ResponseBody
-    public String createEmployee(){
-        Store employee = Store.builder()
-                .firstname("George")
-                .lastname("Popescu")
-                .department("Accounting")
-                .monthlySalary(2400)
+    public String createStore(){
+        StoresTable store = StoresTable.builder()
+                .id(1)
+                .name("Popescu")
+                .address("Galati")
                 .build();
-        storeRepository.save(employee);
+        storeRepository.save(store);
         return "OK!";
     }
 
-    @GetMapping(value = "/showEmployees")
+    @GetMapping(value = "/showStore")
     @ResponseBody
-    public String showEmployees(){
-        List<Store> employeeList = storeRepository.findAll();
-        for (Store e : employeeList){
+    public String showStore(){
+        List<StoresTable> storeList = storeRepository.findAll();
+        for (StoresTable e : storeList){
             System.out.println(e.toString());
         }
         return "OK!";
     }
-
 }
-

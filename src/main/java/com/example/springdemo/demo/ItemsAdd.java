@@ -20,15 +20,7 @@ public class ItemsAdd {
 
     @PostMapping(value = "/submitItem")
     public String submitItems(@ModelAttribute ItemsTable items){
-        System.out.println("hello from submitItem");
-        System.out.println("Name " + items.getName());
-        System.out.println("Price " + items.getPrice());
-        System.out.println("Company " + items.getCompany());
-        System.out.println("Gender " + items.getGender());
-        System.out.println("Color " + items.getColor());
-        System.out.println("Material " + items.getMaterial());
-        System.out.println("Store " + items.getStore());
-        saveToDatabase(items);
+        System.out.println(items.toString());
         return "Items";
     }
 
