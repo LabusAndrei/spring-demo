@@ -24,7 +24,7 @@
             <td>Gender</td>
             <td>Color</td>
             <td>Material</td>
-            <td>Store Code</td>
+            <td>Store</td>
         </tr>
         </thead>
         <tbody>
@@ -36,7 +36,7 @@
             <td th:text="${item.gender}"/>
             <td th:text="${item.color}"/>
             <td th:text="${item.material}"/>
-            <td th:text="${item.storecode}"/>
+            <td th:text="${item.storesTable.id} + ' - ' + ${item.storesTable.name}"/>
         </tr>
         </tbody>
     </table>

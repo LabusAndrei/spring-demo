@@ -27,7 +27,7 @@ public class ItemsTableController {
                 .gender("M")
                 .color("Black")
                 .material("Jeans")
-                .storecode(2)
+                //.storecode(2)
                 .build();
         itemsRepository.save(item);
         return "OK!";

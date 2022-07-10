@@ -26,7 +26,7 @@ public class ItemsAdd {
     @PostMapping(value = "/submitItem")
     public String submitItems(@ModelAttribute ItemsTable items){
         itemsRepository.save(items);
-        return "Items";
+        return "redirect:/Items";
     }
 
     private void saveToDatabase(ItemsTable items) {

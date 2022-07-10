@@ -1,7 +1,7 @@
 create table t_store(
   id integer auto_increment,
   name varchar(50),
-  address varchar(50),
+  address varchar(100),
   primary key(id)
 );
 
@@ -14,5 +14,6 @@ create table t_items(
   color varchar(50),
   material varchar(50),
   storecode integer,
-  primary key(id)
+  primary key(id),
+  foreign key (storecode) references t_store(id)
 );

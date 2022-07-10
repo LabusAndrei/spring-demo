@@ -3,6 +3,7 @@ package com.example.springdemo.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Setter
 @Getter
@@ -20,4 +21,8 @@ public class StoresTable {
     private String name;
     @Column(name = "address")
     private String address;
+
+    @OneToMany(mappedBy = "storesTable", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<ItemsTable> itemsTables;
+
 }

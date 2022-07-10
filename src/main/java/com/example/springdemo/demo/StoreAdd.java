@@ -25,7 +25,7 @@ public class StoreAdd {
     @PostMapping(value = "/submitStore")
     public String submitStore(@ModelAttribute StoresTable store) {
         storeRepository.save(store);
-        return "Stores";
+        return "redirect:/Stores";
     }
 
     private void saveToDatabase(StoresTable store) {

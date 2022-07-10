@@ -28,6 +28,9 @@ public class ItemsTable {
     private String color;
     @Column(name = "material")
     private String material;
-    @Column(name = "storecode")
-    private int storecode;
+
+    @ManyToOne
+    @JoinColumn(name = "storecode")
+    private StoresTable storesTable;
+
 }
