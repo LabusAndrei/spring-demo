@@ -6,7 +6,6 @@
   text-align: center;
 }
 
-
 .pad{
   padding-top: 10px;
   padding-right: 5px;
@@ -17,3 +16,17 @@ html, body {
   height: 100%;
 }
 
+.section{
+  width: 70%;
+  text-align: center;
+  margin-left: auto;
+   margin-right: auto;
+}
+
+.center{
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
