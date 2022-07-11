@@ -18,9 +18,9 @@ public class ItemsTableController {
 
     @GetMapping(value = "/createItems")
     @ResponseBody
-    public String createStore(){
-        ItemsTable item = ItemsTable.builder()
-                .id(1)
+    public String createItems(){
+        ItemsTable item = ItemsTable.builder()   //Acest segment de text a fost folosit pentru verificarea salvarii in tabel
+                .id(1)                             //pana sa se automatizeze tot.
                 .name("Jacheta")
                 .price(29.95)
                 .company("Nike")
