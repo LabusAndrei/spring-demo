@@ -30,18 +30,17 @@
             <td th:text="${store.address}"/>
             <td>
                 <div class="container">
-                    <div class="row">
+                    <div class="row" >
                         <div class="col">
-
-                        <form th:action="@{/editStore}" th:object="${store}" method="post">
-                    <input class="d-none" name="storeId" th:value="${store.id}">
-                    <button type="button" class="btn btn-outline-light edit">Edit</button>
-                        </form></div>
-                            <div class="col">
-                <form th:action="@{/deleteStore}" th:object="${store}" method="post">
-                    <input class="d-none" name="storeId" th:value="${store.id}">
-                    <button type="button" class="btn btn-outline-danger delete">Delete</button>
-                </form></div>
+                            <form th:action="@{/editStore}" th:object="${store}" method="post">
+                                <input class="d-none" name="storeId" th:value="${store.id}">
+                                <button type="button" class="btn btn-outline-light edit">Edit</button>
+                            </form></div>
+                        <div class="col">
+                            <form th:action="@{/deleteStore}" th:object="${store}" method="post">
+                                <input class="d-none" name="storeId" th:value="${store.id}">
+                                <button type="button" class="btn btn-outline-danger delete">Delete</button>
+                            </form></div>
                     </div>
                 </div>
             </td>

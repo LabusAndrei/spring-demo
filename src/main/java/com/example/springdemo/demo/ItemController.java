@@ -3,10 +3,13 @@ package com.example.springdemo.demo;
 import com.example.springdemo.model.ItemsTable;
 import com.example.springdemo.model.StoresTable;
 import com.example.springdemo.repository.ItemsRepository;
+import com.example.springdemo.repository.StoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -15,6 +18,9 @@ public class ItemController {
 
     @Autowired
     ItemsRepository itemsRepository;
+
+    @Autowired
+    StoreRepository storeRepository;
 
     @GetMapping(value = "/Items")
     public String SiteCurs2(Model model) {
@@ -41,4 +47,21 @@ public class ItemController {
         model.addAttribute("itemList", itemList);
         return "Items";
     }
+
+    @PostMapping(value = "/editItem")
+    public String editItem(@RequestParam("itemId") int id, Model model){
+        ItemsTable itemsTable = itemsRepository.findById(id).get();
+        model.addAttribute("item", itemsTable);
+
+        List<StoresTable> storeList = storeRepository.findAll();
+        model.addAttribute("storeList", storeList);
+        return "ItemsAdd";
+    }
+
+    @PostMapping(value = "/deleteItem")
+    public String deleteItem(@RequestParam("itemId") int id){
+        itemsRepository.deleteById(id);
+        return "redirect:/Items";
+    }
+
 }

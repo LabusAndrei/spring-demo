@@ -8,15 +8,3 @@
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
-.edit {
-margin:10px;
-text-align: right;
-}
-
-.delete {
-margin:10px;
-text-align: letf;
-}

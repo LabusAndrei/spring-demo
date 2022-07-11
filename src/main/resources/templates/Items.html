@@ -25,6 +25,7 @@
             <td>Color</td>
             <td>Material</td>
             <td>Store</td>
+            <td>Action</td>
         </tr>
         </thead>
         <tbody>
@@ -37,6 +38,22 @@
             <td th:text="${item.color}"/>
             <td th:text="${item.material}"/>
             <td th:text="${item.storesTable.id} + ' - ' + ${item.storesTable.name}"/>
+            <td>
+                <div class="container">
+                    <div class="row" >
+                        <div class="col">
+                            <form th:action="@{/editItem}" th:object="${item}" method="post">
+                                <input class="d-none" name="itemId" th:value="${item.id}">
+                                <button type="button" class="btn btn-outline-light edit">Edit</button>
+                            </form></div>
+                        <div class="col">
+                            <form th:action="@{/deleteItem}" th:object="${item}" method="post">
+                                <input class="d-none" name="itemId" th:value="${item.id}">
+                                <button type="button" class="btn btn-outline-danger delete">Delete</button>
+                            </form></div>
+                    </div>
+                </div>
+            </td>
         </tr>
         </tbody>
     </table>
