@@ -44,12 +44,12 @@
                         <div class="col">
                             <form th:action="@{/editItem}" th:object="${item}" method="post">
                                 <input class="d-none" name="itemId" th:value="${item.id}">
-                                <button type="button" class="btn btn-outline-light edit">Edit</button>
+                                <button class="btn btn-outline-light edit">Edit</button>
                             </form></div>
                         <div class="col">
                             <form th:action="@{/deleteItem}" th:object="${item}" method="post">
                                 <input class="d-none" name="itemId" th:value="${item.id}">
-                                <button type="button" class="btn btn-outline-danger delete">Delete</button>
+                                <button class="btn btn-outline-danger delete">Delete</button>
                             </form></div>
                     </div>
                 </div>

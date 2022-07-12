@@ -51,7 +51,7 @@ public class ItemController {
     @PostMapping(value = "/editItem")
     public String editItem(@RequestParam("itemId") int id, Model model){
         ItemsTable itemsTable = itemsRepository.findById(id).get();
-        model.addAttribute("item", itemsTable);
+        model.addAttribute("items", itemsTable);
 
         List<StoresTable> storeList = storeRepository.findAll();
         model.addAttribute("storeList", storeList);
